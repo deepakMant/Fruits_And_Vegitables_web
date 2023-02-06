@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help WebSite</title>
+    <!-- link css -->
+    <!-- <link rel="stylesheet" href="./Assets/css/main.css"> -->
+    <style>
+      header {
+        background-color: pink;
+        border:  2px dotted red;
+        margin: 10px 15px;
+        position: absolute;
+        width: 500px;
+        height: 250%;
+      }
+      header .header {
+        background-color: aqua;
+        border:  1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        padding: 20px 100px;
+        right:center;
+        left: 0;
+
+      }
+
+      .profile {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+}
+.profile img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.profile span {
+    font-size: 13px;
+    font-weight: 500;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    column-gap: 0.5rem;
+}
+.logo .bx {
+    font-size: 24px;
+    color: var(--orange-color);
+}
+    </style>
+    <!-- link font  -->
+    <!-- <script src="https://kit.fontawesome.com/d935ff7ff3.js" crossorigin="anonymous"></script> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <!-- navbar  -->
+    <header>
+        <div class="header">
+            <div>
+                <a href="#" class="logo"><i class="bx bxs-basket"></i>Delicacy</a>
+    
+            </div>
+            <!-- menu icon  -->
+    
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <!-- nav-list  -->
+            <ul class="navbar">
+                <li><a href="#home" class="home-active">Home</a></li>
+                <li><a href="#categories"></a>Categories</li>
+                <li><a href="#products"></a>Products</li>
+                <li><a href="#about"></a>About</li>
+                <li><a href="#customers"></a>Customers</li>
+            </ul>
+            <!-- profile  -->
+            <div class="profile">
+                <img src="./Assets/image/profile.jpeg" alt="profile pic">
+                <span>Navraj Mantro</span>
+                <i class="bx bx-caret-down"></i>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
