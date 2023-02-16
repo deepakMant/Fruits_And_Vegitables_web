@@ -96,12 +96,65 @@ header {
     color: var(--bg-color);
     transition: background 0.5s;
 }
+
+/* add yo wish and cart */
+
+.addwishcart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+}
+#addcart {
+    margin-right: 1.1rem;
+    border: 1px solid var(--green-color);
+    color: var(--green-color);
+    padding: 0.5rem;
+    padding-right: 0.6rem;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+}
+.cartcount {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    text-align: center;
+    display: none;
+
+}
+.cartcount span {
+    color: var(--bg-color);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+}
+#wishlist {
+    margin-right: 2rem;
+    border: 1px solid var(--green-color);
+    color: var(--green-color);
+    padding: 0.5rem;
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+#wishlist:hover,#addcart:hover {
+    background: var(--light-green-color);
+    color: var(--bg-color);
+}
 #menu-icon{
     font-size: 24px;
     cursor: pointer;
     z-index: 100001;
     display: none;
 }
+
+/* slider  */
 .container{
     position: relative;
     width: 100%;
@@ -283,6 +336,12 @@ header {
     box-shadow: 1px 2px 11px 4px rgb(14 55 54 /15%);
     border-radius: 0.5rem;
     position: relative;
+}
+.products-container .box:hover{
+    cursor: pointer;
+}
+.products-container .box:hover img{
+    opacity: 0.5;
 }
 
 .products-container .box img {
@@ -598,7 +657,7 @@ header {
         flex-direction: column;
         background: var(--bg-color);
         box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
-        transition: 0.2s all linear;
+        transition: 0.5s all linear;
         text-align: left;
     }
     .navbar a {
@@ -714,4 +773,231 @@ header {
     .Categories-container {
         gap: 1.5rem;
     }
+}
+
+.slider {
+    height: 100%;
+    width: 340px;
+    z-index: 100000;
+    background: var(--bg-color);
+    border-left:1px solid var(--light-green-color);
+    position: fixed;
+    right: -370px;
+    bottom: -25px;
+    transform: translateX(-350);
+    transition: 00.40s all linear;
+    scroll-behavior: auto;
+    overflow: auto;
+    padding: 0.8rem;
+    /* padding-top: 20rem;1 */
+}
+
+.slideranimation{
+    transform: translateX(-370px);
+    transition: 00.40s all linear;
+}
+
+
+.slider .box .inside_box img {
+    width: 32%;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+    padding-right: 1rem;
+    padding-bottom: 0;
+}
+.slider .box .inside_box {
+    /* border:  1px solid gray;
+    padding: 0.5rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.removeBtn {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+
+}
+
+
+.slider .box .inside_box .text_box span {
+    font-weight: 500;
+}
+.slider .box .inside_box .text_box h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    padding-bottom: 1.5rem;
+}
+.slider .box {
+    padding: 20px;
+    margin-bottom: 12px;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 /15%);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.slider .box .inside_box .text_box .removeBtn .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: var(--light-orange-color);
+}
+
+.slider .box .inside_box .text_box .removeBtn .price span {
+    font-size: 1.5rem;
+} 
+
+
+.slider .box .inside_box .text_box .removeBtn{
+    /* border: 1px solid chartreuse; */
+    /* text-align: right; */
+}
+.slider .box .inside_box .text_box .removeBtn .priceSize {
+    font-size: 2.3rem;
+    padding-top: 0.7rem;
+    text-align: right;
+    /* text-align: center; */
+
+}
+.slider .box .inside_box .text_box .removeBtn .priceSize span {
+    color: var(--text-color);
+    font-weight: 400;
+} 
+.slider .box .discount {
+    position: absolute;
+    top: 0.7rem;
+    left: 0;
+    background: var(--light-orange-color);
+    color: var(--bg-color);
+    padding: 3px 10px;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+}
+
+.slider .box .bx-x {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 23px;
+    color: var(--light-orange-color);
+    cursor: pointer;
+}
+
+
+.slider .box .bx-x:hover {
+    color: black;
+}
+
+
+
+.slider .box .bx-cart-alt {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: var(--green-color);
+    color: var(--bg-color);
+    font-size: 20px;
+    border-radius: 0.5rem 0 0.5rem 0;
+}
+
+.slider .box .bx-cart-alt:hover {
+    background: var(--orange-color);
+    transition: 0.2s all linear;
+}
+
+.slider .box  .bx-heart {
+    cursor: pointer;
+
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: var(--orange-color);
+    font-size: 23px;
+}
+.slider .box  .bx-heart:hover {
+    color: black;
+}
+.proQty {
+    display: inline;
+    border: 1px solid var(--orange-color);
+    color: var(--orange-color);
+    padding: 0.2rem 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 5rem;
+}
+.proQty i:hover {
+color: var(--green-color);
+/* background-color: var(--light-green-color); */
+cursor: pointer;
+}
+.proQty span {
+    border: 1px solid var(--orange-color);
+    padding: 0.2rem 0.5rem;
+}
+.total_price p {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+.total_price span {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--light-orange-color);
+}
+.slider .box .btn {
+    max-width: 150px;
+}
+
+
+.slider .paymoad input {
+    width: 20px;
+    height: 20px;
+}
+
+
+.slider .paymoad  {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+
+.slider .paymoad p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--orange-color);
+}
+
+
+.slider .paymoad .inside_box img {
+    width: 20%;
+    height: 3rem;
+    padding-right: 0px;
+}
+
+.slider .thankPage {
+    height: 90vh;
+    
+}
+
+.thankyou {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--orange-color);
+    text-align: center;
+    letter-spacing: 1rem;
+    padding-top: 6rem;
+
+}
+.thankyou p {
+    padding-bottom: 3rem;
+}
+.slider .box .thankyou .btn {
+    max-width: 100%;
+    font-size: 1.6rem;
+    font-size: 600;
 }

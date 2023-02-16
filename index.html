@@ -1,311 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruits & Vegitables Web</title>
     <!-- link css -->
-    <link rel="stylesheet" href="./Assets/css/main.css">
+    <link rel="stylesheet" href="./Assets/css/main.css" />
     <!-- link font  -->
     <!-- <script src="https://kit.fontawesome.com/d935ff7ff3.js" crossorigin="anonymous"></script> -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-    
-</head>
-<body>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- slide  -->
+    <div class="slider" id="slider"></div>
     <!-- navbar  -->
     <header>
-            <a href="#" class="logo"><i class="bx bxs-basket"></i>Delicacy</a>
+      <a href="#" class="logo"><i class="bx bxs-basket"></i>Delicacy</a>
 
-        <!-- menu icon  -->
+      <!-- menu icon  -->
 
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <!-- nav-list  -->
-        <ul class="navbar">
-            <li><a href="#home" class="home-active">Home</a></li>
-            <li><a href="#Categories">Categories</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#customers">Customers</a></li>
-        </ul>
-        <!-- profile  -->
-        <div class="profile">
-            <img src="./Assets/image/profile.jpeg" alt="profile pic">
-            <span>Navraj Mantro</span>
-            <i class="bx bx-caret-down"></i>
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <!-- nav-list  -->
+      <ul class="navbar">
+        <li><a href="#home" class="home-active">Home</a></li>
+        <li><a href="#Categories">Categories</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#customers">Customers</a></li>
+      </ul>
+      <!-- cart and wishlist  -->
+      <div class="addwishcart">
+        <div id="addcart">
+          <div class="cartcount">
+            <span></span>
+          </div>
+          <i class="bx bx-cart-alt" onclick="opencart()"></i>
         </div>
+        <div id="wishlist">
+          <div class="cartcount">
+            <span></span>
+          </div>
+          <i class="bx bx-heart" onclick="openwishlist()"></i>
+        </div>
+      </div>
+
+      <!-- profile  -->
+      <div class="profile">
+        <img src="./Assets/image/profile.jpeg" alt="profile pic" />
+        <span>Navraj Mantro</span>
+        <i class="bx bx-caret-down"></i>
+      </div>
     </header>
     <!-- home  -->
     <section class="home swiper" id="home">
-        <div class="swiper-wrapper ">
-            <!-- slide 1  -->
-            <div class="swiper-slide container">
-                <div class="home-text">
-                    <span>WE are delicacy</span>
-                    <h1>Choose deicacy <br>the best healthy <br>chicken salad</h1>
-                    <a href="#" class="btn">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
-                </div>
-                <img src="./Assets/image/Home1.png" alt="Cassrol_pic_1">
-            </div>
-            <!-- slide 2  -->
-            <div class="swiper-slide container">
-                <div class="home-text">
-                    <span>WE are delicacy</span>
-                    <h1>Choose deicacy <br>the best healthy <br>chicken salad</h1>
-                    <a href="#" class="btn">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
-                </div>
-                <img src="./Assets/image/home2.png" alt="Cassrol_pic_2">
-            </div>
-
-            <!-- slide 3  -->
-            <div class="swiper-slide container">
-                <div class="home-text">
-                    <span>WE are delicacy</span>
-                    <h1>Choose deicacy <br>the best healthy <br>chicken salad</h1>
-                    <a href="#" class="btn">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
-                </div>
-                <img src="./Assets/image/home3.png" alt="Cassrol_pic_3">
-            </div>
-
+      <div class="swiper-wrapper">
+        <!-- slide 1  -->
+        <div class="swiper-slide container">
+          <div class="home-text">
+            <span>WE are delicacy</span>
+            <h1>Choose deicacy <br />the best healthy <br />chicken salad</h1>
+            <a href="#" class="btn"
+              >Shop Now <i class="bx bx-right-arrow-alt"></i
+            ></a>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <img src="./Assets/image/Home1.png" alt="Cassrol_pic_1" />
+        </div>
+        <!-- slide 2  -->
+        <div class="swiper-slide container">
+          <div class="home-text">
+            <span>WE are delicacy</span>
+            <h1>Choose deicacy <br />the best healthy <br />chicken salad</h1>
+            <a href="#" class="btn"
+              >Shop Now <i class="bx bx-right-arrow-alt"></i
+            ></a>
+          </div>
+          <img src="./Assets/image/home2.png" alt="Cassrol_pic_2" />
+        </div>
+
+        <!-- slide 3  -->
+        <div class="swiper-slide container">
+          <div class="home-text">
+            <span>WE are delicacy</span>
+            <h1>Choose deicacy <br />the best healthy <br />chicken salad</h1>
+            <a href="#" class="btn"
+              >Shop Now <i class="bx bx-right-arrow-alt"></i
+            ></a>
+          </div>
+          <img src="./Assets/image/home3.png" alt="Cassrol_pic_3" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </section>
 
     <!-- Categories  -->
     <section class="Categories" id="Categories">
-        <div class="heading">
-            <h1>Browse our hottest <br><span>Categories</span></h1>
-            <a href="#" class="btn">See All <i class="bx bx-right-arrow-alt"></i></a>
+      <div class="heading">
+        <h1>Browse our hottest <br /><span>Categories</span></h1>
+        <a href="#" class="btn"
+          >See All <i class="bx bx-right-arrow-alt"></i
+        ></a>
+      </div>
+      <!-- Categories content -->
+      <div class="Categories-container">
+        <!-- box 1 -->
+        <div class="box box1">
+          <img src="./Assets/image/Fruits.png" alt="" />
+          <h2>Fruits</h2>
+          <span>22 Items</span>
+          <i class="bx bx-right-arrow-alt"></i>
         </div>
-        <!-- Categories content -->
-        <div class="Categories-container">
-            <!-- box 1 -->
-            <div class="box box1">
-                <img src="./Assets/image/Fruits.png" alt="">
-                <h2>Fruits</h2>
-                <span>22 Items</span>
-                <i class="bx bx-right-arrow-alt"></i>
-            </div>
-            <!-- box 2  -->
-            <div class="box box2">
-                <img src="./Assets/image/Vegitbles.png" alt="">
-                <h2>Vegitables</h2>
-                <span>22 Items</span>
-                <i class="bx bx-right-arrow-alt"></i>
-            </div>
-            <!-- box 3 -->
-            <div class="box box3">
-                <img src="./Assets/image/juice.png" alt="">
-                <h2>Drinks</h2>
-                <span>22 Items</span>
-                <i class="bx bx-right-arrow-alt"></i>
-            </div>
-            <!-- box 4 -->
-            <div class="box box4">
-                <img src="./Assets/image/Nuts.png" alt="">
-                <h2>Fresh Nuts</h2>
-                <span>22 Items</span>
-                <i class="bx bx-right-arrow-alt"></i>
-            </div>
-            <!-- box 5 -->
-            <div class="box box5">
-                <img src="./Assets/image/Spices.png" alt="">
-                <h2>Spices</h2>
-                <span>22 Items</span>
-                <i class="bx bx-right-arrow-alt"></i>
-            </div>
+        <!-- box 2  -->
+        <div class="box box2">
+          <img src="./Assets/image/Vegitbles.png" alt="" />
+          <h2>Vegitables</h2>
+          <span>22 Items</span>
+          <i class="bx bx-right-arrow-alt"></i>
         </div>
+        <!-- box 3 -->
+        <div class="box box3">
+          <img src="./Assets/image/juice.png" alt="" />
+          <h2>Drinks</h2>
+          <span>22 Items</span>
+          <i class="bx bx-right-arrow-alt"></i>
+        </div>
+        <!-- box 4 -->
+        <div class="box box4">
+          <img src="./Assets/image/Nuts.png" alt="" />
+          <h2>Fresh Nuts</h2>
+          <span>22 Items</span>
+          <i class="bx bx-right-arrow-alt"></i>
+        </div>
+        <!-- box 5 -->
+        <div class="box box5">
+          <img src="./Assets/image/Spices.png" alt="" />
+          <h2>Spices</h2>
+          <span>22 Items</span>
+          <i class="bx bx-right-arrow-alt"></i>
+        </div>
+      </div>
     </section>
     <!-- products  -->
 
     <section class="products" id="products">
-        <div class="heading">
-            <h1>Our Popular <br><span>products</span></h1>
-            <a href="#" class="btn">Shop Now <i class="bx bx-right-arrow-alt"></i></a>
-        </div>
-        <!-- products content -->
-        <div class="products-container">
-            <!-- box 1  -->
-           <div class="box">
-            <img src="./Assets/image/pro1.png" alt="">
-            <span>Fresh Items</span>
-            <h2>Faram fresh organic <br>fruits 250g</h2>
-            <h3 class="price">$7.93 <span>/kg</span></h3>
-            <i class="bx bx-cart-alt"></i>
-            <i class="bx bx-heart"></i>
-            <span class="discount">-25%</span>
-           </div>
-            <!-- box 2  -->
-            <div class="box">
-                <img src="./Assets/image/pro2.png" alt="">
-                <span>Fresh Items</span>
-                <h2>Faram fresh organic <br>fruits 250g</h2>
-                <h3 class="price">$7.93 <span>/kg</span></h3>
-                <i class="bx bx-cart-alt"></i>
-                <i class="bx bx-heart"></i>
-                <span class="discount">-25%</span>
-               </div>
-
-                <!-- box 3  -->
-           <div class="box">
-            <img src="./Assets/image/pro3.png" alt="">
-            <span>Fresh Items</span>
-            <h2>Faram fresh organic <br>fruits 250g</h2>
-            <h3 class="price">$7.93 <span>/kg</span></h3>
-            <i class="bx bx-cart-alt"></i>
-            <i class="bx bx-heart"></i>
-            <span class="discount">-25%</span>
-           </div>
-
-            <!-- box 4  -->
-            <div class="box">
-                <img src="./Assets/image/pro4.png" alt="">
-                <span>Fresh Items</span>
-                <h2>Faram fresh organic <br>fruits 250g</h2>
-                <h3 class="price">$7.93 <span>/kg</span></h3>
-                <i class="bx bx-cart-alt"></i>
-                <i class="bx bx-heart"></i>
-                <span class="discount">-25%</span>
-               </div>
-                <!-- box 5  -->
-           <div class="box">
-            <img src="./Assets/image/pro5.png" alt="">
-            <span>Fresh Items</span>
-            <h2>Faram fresh organic <br>fruits 250g</h2>
-            <h3 class="price">$7.93 <span>/kg</span></h3>
-            <i class="bx bx-cart-alt"></i>
-            <i class="bx bx-heart"></i>
-            <span class="discount">-25%</span>
-           </div>
-            <!-- box 6  -->
-            <div class="box">
-                <img src="./Assets/image/pro6.png" alt="">
-                <span>Fresh Items</span>
-                <h2>Faram fresh organic <br>fruits 250g</h2>
-                <h3 class="price">$7.93 <span>/kg</span></h3>
-                <i class="bx bx-cart-alt"></i>
-                <i class="bx bx-heart"></i>
-                <span class="discount">-25%</span>
-               </div>
-        </div>
+      <div class="heading">
+        <h1>Our Popular <br /><span>products</span></h1>
+        <a href="#" class="btn"
+          >Shop Now <i class="bx bx-right-arrow-alt"></i
+        ></a>
+      </div>
+      <!-- products content -->
+      <div class="products-container" id="products-container"></div>
     </section>
     <!-- about  -->
     <section class="about" id="about">
-        <img src="./Assets/image/about_pic.png" alt="">
-        <div class="about-text">
-            <span>About Us</span>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem esse, reprehenderit impedit cupiditate fugiat at unde dignissimos natus voluptatem, velit laborum nobis quis minus architecto perferendis aperiam fuga ad veniam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, sit qui.</p>
-            <a href="#" class="btn">Learn More <i class="bx bx-right-arrow-alt"></i></a>     
-        </div>
+      <img src="./Assets/image/about_pic.png" alt="" />
+      <div class="about-text">
+        <span>About Us</span>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem esse,
+          reprehenderit impedit cupiditate fugiat at unde dignissimos natus
+          voluptatem, velit laborum nobis quis minus architecto perferendis
+          aperiam fuga ad veniam?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+          sit qui.
+        </p>
+        <a href="#" class="btn"
+          >Learn More <i class="bx bx-right-arrow-alt"></i
+        ></a>
+      </div>
     </section>
     <!-- customers  -->
     <section class="customers" id="customers">
-        <h2>Why Customer's Love Us</h2>
-        <!-- customers-content  -->
-        <div class="customers-container">
-            <!-- Review 1  -->
-            <div class="box">
-                <i class="bx bxs-quote-alt-left"></i>
-                <div class="stars">
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star-half"></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatibus, dolor fugiat rerum molestiae dolores unde.</p>
-                <div class="review-profile">
-                    <img src="./Assets/image/cust_1.jpeg" alt="">
-                    <h3>Michele Smith</h3>
-                </div>
-            </div>
-             <!-- Review 2  -->
-             <div class="box">
-                <i class="bx bxs-quote-alt-left"></i>
-                <div class="stars">
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star-half"></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatibus, dolor fugiat rerum molestiae dolores unde.</p>
-                <div class="review-profile">
-                    <img src="./Assets/image/cust_2.jpeg" alt="">
-                    <h3>Michele Smith</h3>
-                </div>
-            </div>
-             <!-- Review 3  -->
-             <div class="box">
-                <i class="bx bxs-quote-alt-left"></i>
-                <div class="stars">
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star"></i>
-                    <i class="bx bxs-star-half"></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatibus, dolor fugiat rerum molestiae dolores unde.</p>
-                <div class="review-profile">
-                    <img src="./Assets/image/cust_3.jpeg" alt="">
-                    <h3>Michele Smith</h3>
-                </div>
-            </div>
+      <h2>Why Customer's Love Us</h2>
+      <!-- customers-content  -->
+      <div class="customers-container">
+        <!-- Review 1  -->
+        <div class="box">
+          <i class="bx bxs-quote-alt-left"></i>
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            voluptatibus, dolor fugiat rerum molestiae dolores unde.
+          </p>
+          <div class="review-profile">
+            <img src="./Assets/image/cust_1.jpeg" alt="" />
+            <h3>Michele Smith</h3>
+          </div>
         </div>
+        <!-- Review 2  -->
+        <div class="box">
+          <i class="bx bxs-quote-alt-left"></i>
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            voluptatibus, dolor fugiat rerum molestiae dolores unde.
+          </p>
+          <div class="review-profile">
+            <img src="./Assets/image/cust_2.jpeg" alt="" />
+            <h3>Michele Smith</h3>
+          </div>
+        </div>
+        <!-- Review 3  -->
+        <div class="box">
+          <i class="bx bxs-quote-alt-left"></i>
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            voluptatibus, dolor fugiat rerum molestiae dolores unde.
+          </p>
+          <div class="review-profile">
+            <img src="./Assets/image/cust_3.jpeg" alt="" />
+            <h3>Michele Smith</h3>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- footer  -->
     <section class="footer" id="footer">
-        <div class="footer-box">
-            <a href="#" class="logo"><i class="bx bxs-basket"></i>Delicacy</a>
-            <p>GymVast, 50th Street,4th <br>Floor,NYC 10022</p> 
-            <div class="social">
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-twitter"></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
-                <a href="#"><i class="bx bxl-youtube"></i></a>
-            </div>
+      <div class="footer-box">
+        <a href="#" class="logo"><i class="bx bxs-basket"></i>Delicacy</a>
+        <p>GymVast, 50th Street,4th <br />Floor,NYC 10022</p>
+        <div class="social">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
         </div>
-        <div class="footer-box">
-            <h2>Categories</h2>
-            <a href="#">Fruits & Vegitables</a>
-            <a href="#">Dairy Products</a>
-            <a href="#">Packge Food</a>
-            <a href="#">Bevarage</a>
-        </div>
-        <div class="footer-box">
-            <h2>Useful Links</h2>
-            <a href="#">Payments & Tax</a>
-            <a href="#">Terms Of Use</a>
-            <a href="#">My Blog</a>
-            <a href="#">Return Policy</a>
-        </div>
-        <div class="footer-box">
-            <h2>Newsletter</h2>
-            <p>Get 10% Disscount with <br> Email Newsletter</p>
-            <form action="">
-                <i class="bx bxs-envelope"></i>
-                <input type="emil" name="" id="" placeholder="Enter Yous Email">
-                <i class="bx bx-arrow-back bx-rotate-180"></i>
-            </form>
-        </div>
+      </div>
+      <div class="footer-box">
+        <h2>Categories</h2>
+        <a href="#">Fruits & Vegitables</a>
+        <a href="#">Dairy Products</a>
+        <a href="#">Packge Food</a>
+        <a href="#">Bevarage</a>
+      </div>
+      <div class="footer-box">
+        <h2>Useful Links</h2>
+        <a href="#">Payments & Tax</a>
+        <a href="#">Terms Of Use</a>
+        <a href="#">My Blog</a>
+        <a href="#">Return Policy</a>
+      </div>
+      <div class="footer-box">
+        <h2>Newsletter</h2>
+        <p>
+          Get 10% Disscount with <br />
+          Email Newsletter
+        </p>
+        <form action="">
+          <i class="bx bxs-envelope"></i>
+          <input type="emil" name="" id="" placeholder="Enter Yous Email" />
+          <i class="bx bx-arrow-back bx-rotate-180"></i>
+        </form>
+      </div>
     </section>
 
     <!-- copyright  -->
     <div class="copyright">
-        <p>&#169; CarpoolVenom All Right Reserved.</p>
+      <p>&#169; CarpoolVenom All Right Reserved.</p>
     </div>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-<!-- link to js  -->
+    <!-- link to js  -->
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
